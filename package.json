@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bulma": "^0.9.3",
     "inquirer": "^8.2.1"
   },
   "devDependencies": {
