@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "inquirer": "^8.2.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "name": "team-profile-generator",
+  "description": "<h1 align=center>Team Profile Generator</h1>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K3yuli/team-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K3yuli/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/K3yuli/team-profile-generator#readme"
+}
