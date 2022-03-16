@@ -1,1 +1,1 @@
-// const Intern = require('../lib/Intern');
+// extend Employee

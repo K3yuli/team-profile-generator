@@ -1,1 +1,1 @@
-// const Manager = require('../lib/Manager');
+// extend Employee
