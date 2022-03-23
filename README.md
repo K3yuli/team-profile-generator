@@ -4,7 +4,7 @@
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Demo](#demo)
-- [Links](#links)
+- [Technologies](#technologies)
 
 <a name="user-story">User Story</a>
 
@@ -37,5 +37,9 @@ THEN I exit the application, and the HTML is generated
 ```
 
 <a name="demo">Demo</a>
+<br>
+[Walk through Video](/Users/kenia/Desktop/Projects/c-10/team-profile-generator/team-generator.mp4)
 
-<a name="links">Links</a>
+## <a name="technologies"></a>Technologies
+-  [Node.js](https://nodejs.org/en/)
+-  [Inquirer.js](https://www.npmjs.com/package/inquirer)
