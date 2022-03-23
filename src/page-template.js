@@ -55,3 +55,79 @@ const generateIntern = function(intern) {
 `;
 }
 
+// push array
+generateHTML = (data) => {
+    pageArray = [];
+
+    for(let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
+
+        // manager function
+        if(role === 'Manager') {
+            const managerCard = generateManager(employee);
+
+            pageArray.push(managerCard);
+        }
+
+        // engineer function
+        if(role === 'Engineer') {
+            const engineerCard = generateEngineer(employee);
+
+            pageArray.push(engineerCard);
+        }
+
+        // intern function
+        if(role === 'Intern') {
+            const internCard = generateIntern(employee);
+
+            pageArray.push(internCard);
+        }
+
+        const employeeCards = pageArray.join('')
+
+        const generateTeam = generateTeamPage(employeeCards);
+        return generateTeam;
+    }
+}
+
+    // html page
+    const generateTeamPage = function (employeeCards) {
+        return `
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0b6e5b7972.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>team profile</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar p-3 mb-2 bg-dark text-white" id="navbar">
+        <span class="navbar-brand mb-0 w-100 text-center" id="navbar-text"
+          >My Team</span
+        >
+      </nav>
+    </header>
+    <main>
+    ${employeeCards}
+    </main>
+  </body>
+  <!-- CSS only -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+</html>
+`;
+}
+
+module.exports = generateHTML;
