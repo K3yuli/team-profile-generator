@@ -18,7 +18,7 @@ test('gets engineer github', () => {
 });
 
 // test for getRole() // overridden to return 'Engineer'
-test('gets role of engineer', () => {
+test('gets role of employee', () => {
     const engineer = new Engineer('Nariko', 30, 'nariko.swordz@hs.com', 'hs00swordz');
 
     expect(engineer.getRole()).toEqual("Engineer");
