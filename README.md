@@ -1,16 +1,20 @@
 <h1 align=center>Team Profile Generator</h1>
 
-  ## User Story
+## Table of Contents
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Demo](#demo)
+- [Links](#links)
+
+<a name="user-story">User Story</a>
 
 ```md
 AS A manager
 I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 ```
-## Table of Contents
 
-
-## Acceptance Criteria
+<a name="acceptance-criteria">Acceptance Criteria</a>
 
 ```md
 GIVEN a command-line application that accepts user input
@@ -31,3 +35,7 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
+
+<a name="demo">Demo</a>
+
+<a name="links">Links</a>
