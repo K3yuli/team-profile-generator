@@ -38,7 +38,7 @@ THEN I exit the application, and the HTML is generated
 
 <a name="demo">Demo</a>
 <br>
-[Walk through Video](/Users/kenia/Desktop/Projects/c-10/team-profile-generator/team-generator.mp4)
+[Walk through Video](/../team-profile-generator/team-generator.mp4)
 
 ## <a name="technologies"></a>Technologies
 -  [Node.js](https://nodejs.org/en/)
