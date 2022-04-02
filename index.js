@@ -32,11 +32,11 @@ const addManager = () => {
             type: 'input',
             name: 'id',
             message: "Enter manager's ID:",
-            validate: nameInput => {
-                if(isNaN(nameInput)) {
-                    console.log('Manager ID is required!');
-                    return false;
+            validate: idInput => {
+                if(idInput) {
+                    return true;
                 } else { 
+                    console.log('Manager ID is required!');
                     return false;
                 }
             }
@@ -46,7 +46,8 @@ const addManager = () => {
             name: 'email',
             message: "Enter manager's email:",
             validate: emailInput => {
-                if(emailInput) {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)                
+                if(valid) {
                     return true;
                 } else {
                     console.log('Manager email is required!');
@@ -69,8 +70,8 @@ const addManager = () => {
         }
     ])
     .then(managerInput => {
-        const { name, id, email, officeNumber } = managerInput;
-        const manager = new Manager (name, id, email, officeNumber);
+        const { nameInput, idInput, emailInput, officeNumberInput } = managerInput;
+        const manager = new Manager (nameInput, idInput, emailInput, officeNumberInput );
 
         teamArray.push(manager);
         console.log(manager);
@@ -79,9 +80,9 @@ const addManager = () => {
 
 const addEmployee = () => {
     console.log(`
-    *************************
-    Adding Employees to team
-    *************************
+    ****************************
+    * Adding Employees to team *
+    ****************************
     `);
     return inquirer.prompt([
         {
