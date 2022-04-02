@@ -121,8 +121,8 @@ const addEmployee = () => {
             type: 'input',
             name: 'email',
             message: "Enter Employee's email:",
-            validate: email => {
-                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+            validate: emailInput => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)
                 if(valid) {
                     return true;
                 } else {
@@ -165,14 +165,14 @@ const addEmployee = () => {
         }
     ])
     .then(employeeData => {
-        let { name, id, email, role, github, school, confirmAddEmployee } = employeeData
+        let { nameInput, idInput, emailInput, role, github, school, confirmAddEmployee } = employeeData
         let employee;
 
         if(role === "Engineer") {
-            employee = new Engineer (name, id, email, github);
+            employee = new Engineer (nameInput, idInput, emailInput, github);
             console.log(employee);
         }else if (role === "Intern") {
-            employee = new Intern (name, id, email, school);
+            employee = new Intern (nameInput, idInput, emailInput, school);
             console.log(employee);
         }
         teamArray.push(employee);
