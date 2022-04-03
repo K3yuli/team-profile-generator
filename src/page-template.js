@@ -4,12 +4,14 @@ const generateEngineer = function(engineer) {
     <div class="row mt-4">
     <div class="card col-sm-6 mt-4 mx-auto p-2" style="width: 400px">
       <div class="card-body progress-bar-striped bg-warning">
+
         <h5 class="card-title">${engineer.name}</h5>
         <i class="fa-solid fa-user-gear"></i>
         <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
         <div class="card" style="width: 18rem">
           <li class="list-group-item">ID:${engineer.id}</li>
           <li class="list-group-item">Email:<a href="mailto:${engineer.email}">${engineer.email}</a></li>
+
           <li class="list-group-item">GitHub:<a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
         </div>
       </div>
@@ -23,6 +25,7 @@ const generateManager = function (manager) {
     <div class="row mt-4">
     <div class="card col-sm-6 mt-4 mx-auto p-2" style="width: 25rem">
       <div class="card-body progress-bar-striped bg-warning">
+
         <h5 class="card-title">${manager.name}</h5>
         <i class="fa-solid fa-people-roof"></i>
         <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
@@ -30,6 +33,7 @@ const generateManager = function (manager) {
           <li class="list-group-item">ID:${manager.id}</li>
           <li class="list-group-item">Email:${manager.email}</li>
           <li class="officeNumber list-group-item">Office Number:${manager.officeNumber}</li>
+
         </div>
       </div>
     </div>
@@ -41,12 +45,14 @@ const generateIntern = function(intern) {
     return `
     <div class="card col-sm-6 mt-4 mx-auto p-2" style="width: 25rem">
     <div class="card-body progress-bar-striped bg-warning">
+
       <h5 class="card-title">${intern.name}</h5>
       <i class="fa-solid fa-graduation-cap"></i>
       <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
       <div class="card" style="width: 18rem">
         <li class="id list-group-item">ID:${intern.id}</li>
         <li class="email list-group-item">Email:${intern.email}</li>
+
         <li class="github list-group-item">School:${intern.school}</li>
       </div>
     </div>
