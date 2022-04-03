@@ -17,7 +17,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: "Enter manager's name:",
+            message: "Enter team manager's name:",
             validate: nameInput => {
                 if(nameInput) {
                     return true;
@@ -35,7 +35,7 @@ const addManager = () => {
             validate: idInput => {
                 if(idInput) {
                     return true;
-                } else {
+                } else { 
                     console.log('Manager ID is required!');
                     return false;
                 }
@@ -46,7 +46,8 @@ const addManager = () => {
             name: 'email',
             message: "Enter manager's email:",
             validate: emailInput => {
-                if(emailInput) {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)                
+                if(valid) {
                     return true;
                 } else {
                     console.log('Manager email is required!');
@@ -70,7 +71,7 @@ const addManager = () => {
     ])
     .then(managerInput => {
         const { name, id, email, officeNumber } = managerInput;
-        const manager = new Manager (name, id, email, officeNumber);
+        const manager = new Manager (name, id, email, officeNumber );
 
         teamArray.push(manager);
         console.log(manager);
@@ -79,9 +80,9 @@ const addManager = () => {
 
 const addEmployee = () => {
     console.log(`
-    *************************
-    Adding Employees to team
-    *************************
+    ****************************
+    * Adding Employees to team *
+    ****************************
     `);
     return inquirer.prompt([
         {
@@ -120,8 +121,8 @@ const addEmployee = () => {
             type: 'input',
             name: 'email',
             message: "Enter Employee's email:",
-            validate: email => {
-                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+            validate: emailInput => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)
                 if(valid) {
                     return true;
                 } else {
